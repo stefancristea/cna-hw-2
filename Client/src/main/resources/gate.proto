@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option java_package = "proto";
+
+service GateService {
+  rpc getStarSign (CalendarDate) returns (StarSign) {}
+}
+
+message CalendarDate {
+  string date = 1;
+}
+
+message StarSign {
+  string sign = 2;
+}
