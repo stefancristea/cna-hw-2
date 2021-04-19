@@ -18,7 +18,6 @@ public class Main
         Scanner sn = new Scanner(System.in);
 
         System.out.println("Please insert your birth date (d/m/y): ");
-
         String dateString = sn.next();
 
         try
@@ -28,6 +27,7 @@ public class Main
         catch(IllegalArgumentException e)
         {
             System.out.println("Error: " + e.getMessage());
+            return;
         }
 
         GateServiceGrpc.GateServiceBlockingStub stub = GateServiceGrpc.newBlockingStub(channel);

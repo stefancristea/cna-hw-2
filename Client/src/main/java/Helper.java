@@ -13,7 +13,7 @@ public class Helper
     public static void ValidateDate(String dateString)
     {
 
-        Pattern pattern = Pattern.compile("(0*[1-9]|[1-2][0-9]|3[0-1])\\/(0*[1-9]|11|12)\\/([0-9]{4})", Pattern.CASE_INSENSITIVE);
+        Pattern pattern = Pattern.compile("^(0*[1-9]|[1-2][0-9]|3[0-1])\\/(0*[1-9]|11|12)\\/([0-9]{4})", Pattern.CASE_INSENSITIVE);
         Matcher matcher = pattern.matcher(dateString);
 
         if (!matcher.find())
